@@ -54,7 +54,7 @@ jobs:
           mkdir -p /tmp/digests
           touch /tmp/digests/${DIGEST#sha256:}
       - name: Upload the image's digest
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: digests
           path: /tmp/digests/*
