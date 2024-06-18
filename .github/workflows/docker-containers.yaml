@@ -40,7 +40,7 @@ jobs:
           images: |
             ${{ env.IMAGE_NAME }}
       - name: Build and Push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         id: build
         with:
           context: .
