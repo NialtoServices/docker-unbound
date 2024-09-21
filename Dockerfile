@@ -15,13 +15,13 @@
 # limitations under the License.
 #
 
-FROM alpine:3.19
+FROM alpine:3.20
 
 LABEL org.opencontainers.image.description="Unbound"
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 LABEL org.opencontainers.image.source="https://github.com/NialtoServices/docker-unbound"
 
-ARG UNBOUND_VERSION="1.19.0"
+ARG UNBOUND_VERSION="1.20.0"
 
 RUN apk upgrade --no-cache
 RUN apk add --no-cache ca-certificates tini unbound~=$UNBOUND_VERSION
