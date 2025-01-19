@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 #
-# Copyright 2023 Nialto Services Ltd
+# Copyright 2025 Nialto Services Ltd
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,13 +15,13 @@
 # limitations under the License.
 #
 
-FROM alpine:3.20
+FROM alpine:3.21
 
 LABEL org.opencontainers.image.description="Unbound"
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 LABEL org.opencontainers.image.source="https://github.com/NialtoServices/docker-unbound"
 
-ARG UNBOUND_VERSION="1.21.1"
+ARG UNBOUND_VERSION="1.22.0"
 
 RUN apk upgrade --no-cache
 RUN apk add --no-cache ca-certificates tini unbound~=$UNBOUND_VERSION
